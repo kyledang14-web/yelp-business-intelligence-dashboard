@@ -19,24 +19,24 @@
 **Objective:**
 Analyze the Yelp Open Dataset to understand where business activity concentrates geographically and how customer ratings relate to review volume, supporting market-entry and advertising decisions.
 
-This project transforms 150K+ raw business records (JSON) into a clean analytical dataset and a 2-page interactive Power BI dashboard covering 7M+ customer reviews across 27 states and 1,000+ cities.
+This project analyzes 150K+ businesses and 7M+ customer reviews across 27 states and 1,000+ cities, combining SQL analysis with a 2-page interactive Power BI dashboard.
 
-The work includes data extraction and cleaning, data modeling, DAX measure development, and interactive dashboard design.
+The work includes SQL data exploration and quality checks, data modeling, DAX measure development, and interactive dashboard design.
 
 ---
 
 ## Tools Used
 
-* Python (JSON parsing, data cleaning, feature extraction)
-* Power BI (data modeling, DAX measures, interactive visuals, Top N filtering)
+* SQL (joins, aggregations, filtering, data quality checks — nulls, duplicates, invalid values)
+* Power BI (data modeling, DAX measures, calculated columns, interactive visuals, Top N filtering)
 
 ---
 
-## Data Pipeline
+## Workflow
 
-1. **Extract & clean** — `prepare_business_data.py` parses the raw Yelp JSON (one object per line), extracts business attributes (price range, primary category, open/closed status), and outputs a clean 150,346-row CSV
-2. **Model** — single detail table powers every visual, enabling instant cross-filtering across all pages (replaced static pre-aggregated tables that could not respond to slicers)
-3. **Measures** — 7 DAX measures including Total Reviews, Total Businesses, States/Cities Represented, Average Rating, and threshold counts (500+ reviews, 4.5+ stars)
+1. **Explore & validate** — SQL queries against the Yelp business data: joins, aggregations, and filtering to profile the dataset, plus quality checks for nulls, duplicates, and invalid values
+2. **Model** — a single 150,346-row detail table powers every visual, enabling instant cross-filtering across all pages (replaced static pre-aggregated tables that could not respond to slicers)
+3. **Measures** — 7 DAX measures including Total Reviews, Total Businesses, States/Cities Represented, Average Rating, and threshold counts (500+ reviews, 4.5+ stars), plus calculated columns bucketing businesses by review volume
 4. **Visualize** — 2-page dashboard with KPI cards, slicers, Top N geographic map, and ranked bar charts
 
 ---
@@ -62,7 +62,6 @@ The work includes data extraction and cleaning, data modeling, DAX measure devel
 
 * `yelp_business_dashboard.pbix` → Interactive Power BI dashboard (2 pages)
 * `business_data.csv` → Cleaned dataset (150,346 businesses)
-* `prepare_business_data.py` → Python script that converts the raw Yelp JSON into the clean CSV
 * `summary_page.png` / `activity_page.png` → Dashboard screenshots
 
 ---
@@ -72,7 +71,6 @@ The work includes data extraction and cleaning, data modeling, DAX measure devel
 * Identified the highest-activity states and cities to prioritize market entry and regional advertising spend
 * Isolated high-rating, high-volume businesses as prime advertising partners
 * Quantified the gap between popularity and quality, supporting more targeted business development than raw review counts alone
-* Established a reusable pipeline: refreshing the dashboard with a new Yelp data drop only requires re-running one script
 
 ---
 
