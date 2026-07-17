@@ -32,6 +32,18 @@ The work includes SQL data exploration and quality checks, data modeling, DAX me
 
 ---
 
+## Data Pipeline
+Raw Yelp Dataset
+
+SQL Data Exploration & Validation
+Data Cleaning & Quality Checks
+Power BI Data Model
+DAX Measures & Calculated Columns
+Interactive Dashboard
+Business Insights
+
+---
+
 ## Workflow
 
 1. **Explore & validate** — SQL queries against the Yelp business data: joins, aggregations, and filtering to profile the dataset, plus quality checks for nulls, duplicates, and invalid values
