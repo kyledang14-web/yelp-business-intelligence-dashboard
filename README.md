@@ -80,9 +80,10 @@ Raw Yelp Dataset
 
 ## Business Impact
 
-* Identified the highest-activity states and cities to prioritize market entry and regional advertising spend
-* Isolated high-rating, high-volume businesses as prime advertising partners
-* Quantified the gap between popularity and quality, supporting more targeted business development than raw review counts alone
+* Found the states and cities with the most Yelp activity — useful for deciding where to focus regionally
+* Flagged businesses with both high ratings and high review volume as the strongest advertising targets
+* Showed that review volume alone doesn't equal satisfaction — a heavily-reviewed business can still rate poorly
+* Built the whole analysis on 150K+ real business records, filterable by state, city, and review-volume bucket
 
 ---
 
