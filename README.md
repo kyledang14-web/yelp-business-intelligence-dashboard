@@ -35,12 +35,12 @@ The work includes SQL data exploration and quality checks, data modeling, DAX me
 ## Data Pipeline
 Raw Yelp Dataset
 
-SQL Data Exploration & Validation
-Data Cleaning & Quality Checks
-Power BI Data Model
-DAX Measures & Calculated Columns
-Interactive Dashboard
-Business Insights
+1.SQL Data Exploration & Validation
+2.Data Cleaning & Quality Checks
+3.Power BI Data Model
+4.DAX Measures & Calculated Columns
+5.Interactive Dashboard
+6.Business Insights
 
 ---
 
@@ -49,7 +49,7 @@ Business Insights
 1. **Explore & validate** — SQL queries against the Yelp business data: joins, aggregations, and filtering to profile the dataset, plus quality checks for nulls, duplicates, and invalid values
 2. **Model** — a single 150,346-row detail table powers every visual, enabling instant cross-filtering across all pages (replaced static pre-aggregated tables that could not respond to slicers)
 3. **Measures** — 7 DAX measures including Total Reviews, Total Businesses, States/Cities Represented, Average Rating, and threshold counts (500+ reviews, 4.5+ stars), plus calculated columns bucketing businesses by review volume
-4. **Visualize** — 2-page dashboard with KPI cards, slicers, Top N geographic map, and ranked bar charts
+4. **Visualize** — Built an executive style Power BI dashboard using KPI cards, geographic mapping, ranking visuals, scatterplots, slicers, and dynamic to support interactive business analysis.
 
 ---
 
