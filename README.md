@@ -1,5 +1,24 @@
 # Yelp Business Intelligence Dashboard
 
+Built to answer a business question, not just to visualize data.
+
+---
+
+## Scenario — The Business Ask
+
+To simulate how this work happens on a real team, I framed the project around a business scenario instead of building charts for their own sake.
+
+**The situation:** A team that advertises and partners with local businesses is deciding where to focus next year. They have 150K+ businesses and 7M+ Yelp reviews sitting in a raw table — and no way to read it before a leadership meeting.
+
+**The questions I set out to answer:**
+1. **Where is activity concentrated?** Which states and cities dominate by business count and review volume — so we don't spread thin across 27 states?
+2. **Are the biggest markets also the best?** Leadership assumes "more businesses = better market." Is that actually true, or do the highest-*rated* markets differ from the highest-*volume* ones?
+3. **What does overall quality look like?** One view of the ratings spread across the whole marketplace.
+4. **Where are the standout businesses?** For a premium-partner program, which states hold the most 4.5★+ businesses?
+5. **Can it be sliced live?** Filter by state, city, and review volume on the spot, with every KPI recomputing.
+
+I built a 2-page Power BI dashboard that answers all five.
+
 ---
 
 ## Dashboard Previews
@@ -17,7 +36,7 @@
 ## Overview
 
 **Objective:**
-Analyze the Yelp Open Dataset to understand where business activity concentrates geographically and how customer ratings relate to review volume, supporting market-entry and advertising decisions.
+Answer the business questions above using the Yelp Open Dataset — where activity concentrates, how ratings relate to volume, and which markets to prioritize — and package it so a non-technical stakeholder can explore it in a meeting.
 
 This project analyzes 150K+ businesses and 7M+ customer reviews across 27 states and 1,000+ cities, combining SQL analysis with a 2-page interactive Power BI dashboard.
 
@@ -61,12 +80,13 @@ Raw Yelp Dataset
 
 ---
 
-## Key Insights
+## Key Findings (Answering the Questions)
 
-* Yelp engagement is highly concentrated: the top 10 states account for the large majority of total review volume, led by Pennsylvania
-* Philadelphia generates the most review activity of any city, ahead of New Orleans and Nashville
-* Most businesses cluster between 3.5 and 4.5 stars — high review volume does not imply high ratings, and standout businesses (4.5+ stars with 500+ reviews) are a small identifiable segment
-* Review volume is heavily skewed: the majority of businesses have fewer than 50 reviews, while a small group exceeds 1,000
+* **Q1 — Where's the activity?** Highly concentrated: Pennsylvania (34K businesses) and Florida (26K) dominate, and the top 10 states hold the large majority of all review volume. Philadelphia is the single most active city.
+* **Q2 — Biggest = best? No.** California posts the **highest average rating (4.0★) with only ~5,200 businesses**, while Pennsylvania — the largest market by count — sits at a middling 3.57★. The biggest markets are not the highest-rated. *(This reframed the "more businesses = better market" assumption.)*
+* **Q3 — Overall quality?** Ratings cluster between 3.5 and 4.5 stars and skew positive; very few businesses sit below 2★ — a bias worth naming rather than taking the 3.6★ average at face value.
+* **Q4 — Standout businesses?** 4.5★+ businesses concentrate in PA and FL; the truly standout segment (4.5★+ with 500+ reviews) is small and clearly identifiable for targeting.
+* **Q5 — Live slicing?** Every KPI and visual recomputes by state, city, and review-volume bucket, so questions like "what about just Florida?" are answered in the room.
 
 ---
 
