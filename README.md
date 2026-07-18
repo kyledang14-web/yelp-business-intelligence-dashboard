@@ -6,18 +6,22 @@ Built to answer a business question, not just to visualize data.
 
 ## Scenario — The Business Ask
 
-To simulate how this work happens on a real team, I framed the project around a business scenario instead of building charts for their own sake.
+To simulate how this work actually lands on an analyst's desk, I framed the project around a realistic, open-ended request instead of building charts for their own sake.
 
-**The situation:** A team that advertises and partners with local businesses is deciding where to focus next year. They have 150K+ businesses and 7M+ Yelp reviews sitting in a raw table — and no way to read it before a leadership meeting.
+**The brief, the way a manager would give it:**
 
-**The questions I set out to answer:**
-1. **Where is activity concentrated?** Which states and cities dominate by business count and review volume — so we don't spread thin across 27 states?
-2. **Are the biggest markets also the best?** Leadership assumes "more businesses = better market." Is that actually true, or do the highest-*rated* markets differ from the highest-*volume* ones?
-3. **What does overall quality look like?** One view of the ratings spread across the whole marketplace.
-4. **Where are the standout businesses?** For a premium-partner program, which states hold the most 4.5★+ businesses?
-5. **Can it be sliced live?** Filter by state, city, and review volume on the spot, with every KPI recomputing.
+> "Build me a dashboard so I can actually see what's going on with the businesses on our platform. Right now, if leadership asks me how they're doing, where our strong markets are, or who our top businesses are, I've got nothing but a giant table. I want something I can pull up in a meeting and dig into myself — without coming to you every time."
 
-I built a 2-page Power BI dashboard that answers all five.
+No chart specs, no metrics named — just a goal and a frustration. Turning that vague ask into the right views was the job.
+
+**What I translated it into:**
+* **Scale & quality at a glance** — KPI cards for total businesses, reviews, states, cities, and average rating
+* **Where the activity is** — top states and cities by review volume
+* **Overall quality** — the ratings distribution across the whole marketplace
+* **The standout businesses** — highly rated, high-volume targets, plus which states hold the most 4.5★+ businesses
+* **Self-service** — slicers for state, city, and review volume so the stakeholder answers their own follow-ups
+
+The result is a 2-page Power BI dashboard the stakeholder can read and explore on their own.
 
 ---
 
@@ -36,7 +40,7 @@ I built a 2-page Power BI dashboard that answers all five.
 ## Overview
 
 **Objective:**
-Answer the business questions above using the Yelp Open Dataset — where activity concentrates, how ratings relate to volume, and which markets to prioritize — and package it so a non-technical stakeholder can explore it in a meeting.
+Turn an open-ended "help me see what's going on" request into a dashboard a non-technical stakeholder can read and explore on their own — using the Yelp Open Dataset to show where activity concentrates, how ratings relate to volume, and which businesses stand out.
 
 This project analyzes 150K+ businesses and 7M+ customer reviews across 27 states and 1,000+ cities, combining SQL analysis with a 2-page interactive Power BI dashboard.
 
@@ -80,13 +84,13 @@ Raw Yelp Dataset
 
 ---
 
-## Key Findings (Answering the Questions)
+## Key Findings
 
-* **Q1 — Where's the activity?** Highly concentrated: Pennsylvania (34K businesses) and Florida (26K) dominate, and the top 10 states hold the large majority of all review volume. Philadelphia is the single most active city.
-* **Q2 — Biggest = best? No.** California posts the **highest average rating (4.0★) with only ~5,200 businesses**, while Pennsylvania — the largest market by count — sits at a middling 3.57★. The biggest markets are not the highest-rated. *(This reframed the "more businesses = better market" assumption.)*
-* **Q3 — Overall quality?** Ratings cluster between 3.5 and 4.5 stars and skew positive; very few businesses sit below 2★ — a bias worth naming rather than taking the 3.6★ average at face value.
-* **Q4 — Standout businesses?** 4.5★+ businesses concentrate in PA and FL; the truly standout segment (4.5★+ with 500+ reviews) is small and clearly identifiable for targeting.
-* **Q5 — Live slicing?** Every KPI and visual recomputes by state, city, and review-volume bucket, so questions like "what about just Florida?" are answered in the room.
+* **Activity is concentrated.** Pennsylvania (34K businesses) and Florida (26K) dominate, and the top 10 states hold the large majority of all review volume. Philadelphia is the single most active city.
+* **The biggest markets aren't the best.** California posts the **highest average rating (4.0★) with only ~5,200 businesses**, while Pennsylvania — the largest market by count — sits at a middling 3.57★. Bigger ≠ better-rated.
+* **Overall quality skews positive.** Ratings cluster between 3.5 and 4.5 stars; very few businesses sit below 2★ — a bias worth naming rather than taking the 3.6★ average at face value.
+* **Standout businesses are a small, findable segment.** 4.5★+ businesses concentrate in PA and FL, and the truly standout group (4.5★+ with 500+ reviews) is small and clearly identifiable for targeting.
+* **Everything is self-service.** Every KPI and visual recomputes by state, city, and review-volume bucket, so follow-ups like "what about just Florida?" are answered on the spot.
 
 ---
 
